@@ -1,2 +1,2 @@
 # jbfaden.github.io
-experiment with github pages
+Jeremy's experiment with github pages
