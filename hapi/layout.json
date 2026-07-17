@@ -76,11 +76,11 @@
                 "visible": true,
                 "source": {
                   "type": "hapi_data",
-                  "server": "https://hapi.spaceweather.knmi.nl/hapi",
-                  "dataset": "f10_7",
-                  "parameters": ["f10_7"]
+                  "server": "https://cottagesystems.com/server/ct/hapi",
+                  "dataset": "temperatures",
+                  "parameters": ["pool"]
                 },
-                "parameter_mapping": { "value": "f10_7" },
+                "parameter_mapping": { "value": "pool" },
                 "style": {
                   "stroke": "#4c72b0",
                   "stroke_width": 1,
@@ -96,11 +96,11 @@
                 "visible": true,
                 "source": {
                   "type": "hapi_data",
-                  "server": "https://hapi.spaceweather.knmi.nl/hapi",
-                  "dataset": "f10_7",
-                  "parameters": ["f10_7a"]
+                  "server": "https://cottagesystems.com/server/ct/hapi",
+                  "dataset": "temperatures",
+                  "parameters": ["pool"]
                 },
-                "parameter_mapping": { "value": "f10_7a" },
+                "parameter_mapping": { "value": "pool" },
                 "style": {
                   "stroke": "#888888",
                   "stroke_width": 3,
@@ -113,11 +113,11 @@
                 "visible": true,
                 "source": {
                   "type": "hapi_data",
-                  "server": "https://hapi.spaceweather.knmi.nl/hapi",
-                  "dataset": "f10_7_monthly",
-                  "parameters": ["f10_7_13month_smoothed"]
+                  "server": "https://cottagesystems.com/server/ct/hapi",
+                  "dataset": "temperatures",
+                  "parameters": ["pool"]
                 },
-                "parameter_mapping": { "value": "f10_7_13month_smoothed" },
+                "parameter_mapping": { "value": "pool" },
                 "style": {
                   "stroke": "currentColor",
                   "stroke_width": 5,
