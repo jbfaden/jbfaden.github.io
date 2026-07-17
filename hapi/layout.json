@@ -10,7 +10,7 @@
   },
   "time_domain": {
     "tmin": "-P3M",
-    "tmax": "P0M"
+    "tmax": "-P1M"
   },
   "sections": {
     "center": {
