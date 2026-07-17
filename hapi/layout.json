@@ -1,0 +1,175 @@
+{
+  "version": 1,
+  "drivers": {},
+  "options": {
+    "zoom_detail_factor": 4,
+    "playhead_display_mode": "off",
+    "prefetch_factor": 3.0008,
+    "initial_playhead_position": "now",
+    "playhead_tracking_mode": "lock_to_time"
+  },
+  "time_domain": {
+    "tmin": "-P3Y",
+    "tmax": "P3M"
+  },
+  "sections": {
+    "center": {
+      "pane": {
+        "pane_type": "timeseries",
+        "title": "Timeline",
+        "subplot_rows": [
+          {
+            "title": "Sunspot number",
+            "height": 150,
+            "bottom_margin": 44,
+            "visible": true,
+            "y_axis": {
+              "scale": "linear",
+              "tick_spacing": 50,
+              "tick_format": "auto",
+              "label": "Sunspot number"
+            },
+            "y_domain": {
+              "current": [0, 500],
+              "bounds": [0, 600]
+            },
+            "visualisation_layers": [
+              {
+                "layer_type": "area",
+                "title": "Silso observed daily",
+                "visible": true,
+                "source": {
+                  "type": "hapi_data",
+                  "server": "https://hapi.spaceweather.knmi.nl/hapi",
+                  "dataset": "sunspot_number_silso_daily",
+                  "parameters": ["sunspot_number"]
+                },
+                "parameter_mapping": { "value": "sunspot_number" },
+                "style": {
+                  "stroke": "#4c72b0",
+                  "stroke_width": 1,
+                  "fill": "#4c72b0",
+                  "fill_opacity": 0.3,
+                  "baseline_mode": "constant",
+                  "baseline": 0
+                }
+              },
+              {
+                "layer_type": "line",
+                "title": "SILSO observed monthly mean",
+                "visible": true,
+                "source": {
+                  "type": "hapi_data",
+                  "server": "https://hapi.spaceweather.knmi.nl/hapi",
+                  "dataset": "sunspot_number_silso_monthly",
+                  "parameters": ["sunspot_number_monthly_mean"]
+                },
+                "parameter_mapping": { "value": "sunspot_number_monthly_mean" },
+                "style": {
+                  "stroke": "#888888",
+                  "stroke_width": 3,
+                  "curve_type": "linear"
+                }
+              },
+              {
+                "layer_type": "line",
+                "title": "SILSO observed 13-month smoothed",
+                "visible": true,
+                "source": {
+                  "type": "hapi_data",
+                  "server": "https://hapi.spaceweather.knmi.nl/hapi",
+                  "dataset": "sunspot_number_silso_monthly_smoothed",
+                  "parameters": ["sunspot_number_13month_smoothed"]
+                },
+                "parameter_mapping": { "value": "sunspot_number_13month_smoothed" },
+                "style": {
+                  "stroke": "currentColor",
+                  "stroke_width": 5,
+                  "curve_type": "linear"
+                },
+                "fetch_options": { "zoom_detail_factor": 5 }
+              }
+            ],
+            "legend_visible": true
+          },
+          {
+            "title": "10.7 cm Solar radio flux",
+            "height": 150,
+            "bottom_margin": 20,
+            "visible": true,
+            "y_axis": {
+              "scale": "linear",
+              "tick_spacing": 50,
+              "tick_format": "auto",
+              "label": "Solar radio flux (sfu)"
+            },
+            "y_domain": {
+              "current": [60, 300],
+              "bounds": [0, 400]
+            },
+            "visualisation_layers": [
+              {
+                "layer_type": "area",
+                "title": "F10.7 daily",
+                "visible": true,
+                "source": {
+                  "type": "hapi_data",
+                  "server": "https://hapi.spaceweather.knmi.nl/hapi",
+                  "dataset": "f10_7",
+                  "parameters": ["f10_7"]
+                },
+                "parameter_mapping": { "value": "f10_7" },
+                "style": {
+                  "stroke": "#4c72b0",
+                  "stroke_width": 1,
+                  "fill": "#4c72b0",
+                  "fill_opacity": 0.3,
+                  "baseline_mode": "constant",
+                  "baseline": 0
+                }
+              },
+              {
+                "layer_type": "line",
+                "title": "81-day average F10.7",
+                "visible": true,
+                "source": {
+                  "type": "hapi_data",
+                  "server": "https://hapi.spaceweather.knmi.nl/hapi",
+                  "dataset": "f10_7",
+                  "parameters": ["f10_7a"]
+                },
+                "parameter_mapping": { "value": "f10_7a" },
+                "style": {
+                  "stroke": "#888888",
+                  "stroke_width": 3,
+                  "curve_type": "linear"
+                }
+              },
+              {
+                "layer_type": "line",
+                "title": "13-month smoothed F10.7",
+                "visible": true,
+                "source": {
+                  "type": "hapi_data",
+                  "server": "https://hapi.spaceweather.knmi.nl/hapi",
+                  "dataset": "f10_7_monthly",
+                  "parameters": ["f10_7_13month_smoothed"]
+                },
+                "parameter_mapping": { "value": "f10_7_13month_smoothed" },
+                "style": {
+                  "stroke": "currentColor",
+                  "stroke_width": 5,
+                  "curve_type": "linear"
+                }
+              }
+            ],
+            "legend_visible": true
+          }
+        ],
+        "margins": { "top": 20, "bottom": 20, "left": 85, "right": 30 }
+      }
+    },
+    "right": { "width": 0, "panes": [] },
+    "top": { "height": 0, "panes": [] }
+  }
+}
