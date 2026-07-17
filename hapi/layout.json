@@ -19,7 +19,7 @@
         "title": "Timeline",
         "subplot_rows": [
           {
-            "title": "Sunspot number",
+            "title": "Pool Temperature",
             "height": 150,
             "bottom_margin": 44,
             "visible": true,
@@ -27,7 +27,7 @@
               "scale": "linear",
               "tick_spacing": 50,
               "tick_format": "auto",
-              "label": "Sunspot number"
+              "label": "Temperature (&deg;F)"
             },
             "y_domain": {
               "current": [0, 500],
@@ -35,59 +35,21 @@
             },
             "visualisation_layers": [
               {
-                "layer_type": "area",
-                "title": "Silso observed daily",
-                "visible": true,
-                "source": {
-                  "type": "hapi_data",
-                  "server": "https://hapi.spaceweather.knmi.nl/hapi",
-                  "dataset": "sunspot_number_silso_daily",
-                  "parameters": ["sunspot_number"]
-                },
-                "parameter_mapping": { "value": "sunspot_number" },
-                "style": {
-                  "stroke": "#4c72b0",
-                  "stroke_width": 1,
-                  "fill": "#4c72b0",
-                  "fill_opacity": 0.3,
-                  "baseline_mode": "constant",
-                  "baseline": 0
-                }
-              },
-              {
                 "layer_type": "line",
-                "title": "SILSO observed monthly mean",
+                "title": "Pool Temperatures",
                 "visible": true,
                 "source": {
                   "type": "hapi_data",
-                  "server": "https://hapi.spaceweather.knmi.nl/hapi",
-                  "dataset": "sunspot_number_silso_monthly",
-                  "parameters": ["sunspot_number_monthly_mean"]
+                  "server": "https://cottagesystems.com/server/ct/hapi",
+                  "dataset": "temperatures",
+                  "parameters": ["pool"]
                 },
-                "parameter_mapping": { "value": "sunspot_number_monthly_mean" },
+                "parameter_mapping": { "value": "pool" },
                 "style": {
                   "stroke": "#888888",
                   "stroke_width": 3,
                   "curve_type": "linear"
                 }
-              },
-              {
-                "layer_type": "line",
-                "title": "SILSO observed 13-month smoothed",
-                "visible": true,
-                "source": {
-                  "type": "hapi_data",
-                  "server": "https://hapi.spaceweather.knmi.nl/hapi",
-                  "dataset": "sunspot_number_silso_monthly_smoothed",
-                  "parameters": ["sunspot_number_13month_smoothed"]
-                },
-                "parameter_mapping": { "value": "sunspot_number_13month_smoothed" },
-                "style": {
-                  "stroke": "currentColor",
-                  "stroke_width": 5,
-                  "curve_type": "linear"
-                },
-                "fetch_options": { "zoom_detail_factor": 5 }
               }
             ],
             "legend_visible": true
