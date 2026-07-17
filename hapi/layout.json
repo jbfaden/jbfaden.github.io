@@ -9,8 +9,8 @@
     "playhead_tracking_mode": "lock_to_time"
   },
   "time_domain": {
-    "tmin": "-P3M",
-    "tmax": "-P1M"
+    "tmin": "-P3D",
+    "tmax": "-P0D"
   },
   "sections": {
     "center": {
@@ -30,7 +30,7 @@
               "label": "Temperature (°F)"
             },
             "y_domain": {
-              "current": [0, 500],
+              "current": [0, 100],
               "bounds": [0, 600]
             },
             "visualisation_layers": [
@@ -66,7 +66,7 @@
               "label": "Temperature (°F)"
             },
             "y_domain": {
-              "current": [60, 300],
+              "current": [0, 100],
               "bounds": [0, 400]
             },
             "visualisation_layers": [
