@@ -9,8 +9,8 @@
     "playhead_tracking_mode": "lock_to_time"
   },
   "time_domain": {
-    "tmin": "-P3D",
-    "tmax": "-P0D"
+    "tmin": "-P10D",
+    "tmax": "P0D"
   },
   "sections": {
     "center": {
