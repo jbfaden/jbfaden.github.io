@@ -9,8 +9,8 @@
     "playhead_tracking_mode": "lock_to_time"
   },
   "time_domain": {
-    "tmin": "-P3Y",
-    "tmax": "P3M"
+    "tmin": "-P3M",
+    "tmax": "P0M"
   },
   "sections": {
     "center": {
@@ -27,7 +27,7 @@
               "scale": "linear",
               "tick_spacing": 50,
               "tick_format": "auto",
-              "label": "Temperature (&deg;F)"
+              "label": "Temperature (°F)"
             },
             "y_domain": {
               "current": [0, 500],
@@ -36,7 +36,7 @@
             "visualisation_layers": [
               {
                 "layer_type": "line",
-                "title": "Pool Temperatures",
+                "title": "Pool Temperature",
                 "visible": true,
                 "source": {
                   "type": "hapi_data",
@@ -55,7 +55,7 @@
             "legend_visible": true
           },
           {
-            "title": "10.7 cm Solar radio flux",
+            "title": "Ground Temperature",
             "height": 150,
             "bottom_margin": 20,
             "visible": true,
@@ -63,7 +63,7 @@
               "scale": "linear",
               "tick_spacing": 50,
               "tick_format": "auto",
-              "label": "Solar radio flux (sfu)"
+              "label": "Temperature (°F)"
             },
             "y_domain": {
               "current": [60, 300],
@@ -71,56 +71,19 @@
             },
             "visualisation_layers": [
               {
-                "layer_type": "area",
-                "title": "F10.7 daily",
-                "visible": true,
-                "source": {
-                  "type": "hapi_data",
-                  "server": "https://cottagesystems.com/server/ct/hapi",
-                  "dataset": "temperatures",
-                  "parameters": ["pool"]
-                },
-                "parameter_mapping": { "value": "pool" },
-                "style": {
-                  "stroke": "#4c72b0",
-                  "stroke_width": 1,
-                  "fill": "#4c72b0",
-                  "fill_opacity": 0.3,
-                  "baseline_mode": "constant",
-                  "baseline": 0
-                }
-              },
-              {
                 "layer_type": "line",
-                "title": "81-day average F10.7",
+                "title": "Pool Temperature",
                 "visible": true,
                 "source": {
                   "type": "hapi_data",
                   "server": "https://cottagesystems.com/server/ct/hapi",
                   "dataset": "temperatures",
-                  "parameters": ["pool"]
+                  "parameters": ["ground"]
                 },
-                "parameter_mapping": { "value": "pool" },
+                "parameter_mapping": { "value": "ground" },
                 "style": {
                   "stroke": "#888888",
                   "stroke_width": 3,
-                  "curve_type": "linear"
-                }
-              },
-              {
-                "layer_type": "line",
-                "title": "13-month smoothed F10.7",
-                "visible": true,
-                "source": {
-                  "type": "hapi_data",
-                  "server": "https://cottagesystems.com/server/ct/hapi",
-                  "dataset": "temperatures",
-                  "parameters": ["pool"]
-                },
-                "parameter_mapping": { "value": "pool" },
-                "style": {
-                  "stroke": "currentColor",
-                  "stroke_width": 5,
                   "curve_type": "linear"
                 }
               }
