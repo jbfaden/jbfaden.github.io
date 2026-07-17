@@ -72,7 +72,7 @@
             "visualisation_layers": [
               {
                 "layer_type": "line",
-                "title": "Pool Temperature",
+                "title": "Ground Temperature",
                 "visible": true,
                 "source": {
                   "type": "hapi_data",
